@@ -35,3 +35,6 @@ php bin/console currencies:update-all-rates
 
 # Testing
 
+```
+./bin/phpunit
+```

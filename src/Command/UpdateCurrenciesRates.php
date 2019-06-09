@@ -78,7 +78,8 @@ class UpdateCurrenciesRates extends Command
 
             $data = $retriever->retrieve();
             $data = $mapper->map($data);
-            $data = $this->currencyService->addMissingDates($data);
+            $endDate = date('Y-m-d');
+            $data = $this->currencyService->addMissingDates($data, $endDate);
 
             $json = json_encode($data);
 

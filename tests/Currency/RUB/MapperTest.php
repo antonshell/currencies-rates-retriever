@@ -30,6 +30,74 @@ class MapperTest extends TestCase
 
     public function testMap()
     {
-        //$result = $this->mapper->map();
+        $data = $this->getData();
+        $result = $this->mapper->map($data);
+
+        $this->assertEquals(3, count($result));
+
+        $this->assertEquals('1998-12-31', $result[0]['date']);
+        $this->assertEquals('20.6500', $result[0]['rate']);
+
+        $this->assertEquals('1999-01-06', $result[2]['date']);
+        $this->assertEquals('20.6500', $result[2]['rate']);
+    }
+
+    private function getData(){
+        return [
+            [
+                'tag' => 'tr',
+                'html' => '\r\n  ',
+                'children' => [
+                    [
+                        'tag' => 'td',
+                        'html' => '31.12.1998'
+                    ],
+                    [
+                        'tag' => 'td',
+                        'html' => '1'
+                    ],
+                    [
+                        'tag' => 'td',
+                        'html' => '20,6500'
+                    ]
+                ]
+            ],
+            [
+                'tag' => 'tr',
+                'html' => '\r\n  ',
+                'children' => [
+                    [
+                        'tag' => 'td',
+                        'html' => '01.01.1999'
+                    ],
+                    [
+                        'tag' => 'td',
+                        'html' => '1'
+                    ],
+                    [
+                        'tag' => 'td',
+                        'html' => '20,6500'
+                    ]
+                ]
+            ],
+            [
+                'tag' => 'tr',
+                'html' => '\r\n  ',
+                'children' => [
+                    [
+                        'tag' => 'td',
+                        'html' => '06.01.1999'
+                    ],
+                    [
+                        'tag' => 'td',
+                        'html' => '1'
+                    ],
+                    [
+                        'tag' => 'td',
+                        'html' => '20,6500'
+                    ]
+                ]
+            ]
+        ];
     }
 }

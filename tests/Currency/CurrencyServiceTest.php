@@ -39,9 +39,17 @@ class CurrencyServiceTest extends TestCase
             ['date' => '1998-01-05','rate' => '1.638']
         ];
 
-        $results = $this->currencyService->addMissingDates($data);
+        $endDate = '1998-01-05';
 
-        $this->assertEquals($data[0]['date'], $results[0]['date']);
-        $this->assertEquals($data[0]['rate'], $results[0]['rate']);
+        $results = $this->currencyService->addMissingDates($data, $endDate);
+
+        $this->assertEquals('1998-01-02', $results[0]['date']);
+        $this->assertEquals('1.6405', $results[0]['rate']);
+
+        $this->assertEquals('1998-01-04', $results[2]['date']);
+        $this->assertEquals('1.6405', $results[2]['rate']);
+
+        $this->assertEquals('1998-01-05', $results[3]['date']);
+        $this->assertEquals('1.638', $results[3]['rate']);
     }
 }
