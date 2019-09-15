@@ -12,6 +12,7 @@ class CurrencyFactory
     const EUR = 'EUR';
     const GBP = 'GBP';
     const RUB = 'RUB';
+    const CAD = 'CAD';
 
     /**
      * @param string $currency

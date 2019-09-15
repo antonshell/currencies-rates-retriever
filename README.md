@@ -8,6 +8,8 @@ RUB: https://www.cbr.ru/currency_base/dynamics/?UniDbQuery.Posted=True&UniDbQuer
 
 GBP: https://www.bankofengland.co.uk/boeapps/database/fromshowcolumns.asp?Travel=NIxAZxSUx&FromSeries=1&ToSeries=50&DAT=RNG&FD=1&FM=Jan&FY=2017&TD=31&TM=Dec&TY=2025&FNY=Y&CSVF=TT&html.x=66&html.y=26&SeriesCodes=XUDLUSS&UsingCodes=Y&Filter=N&title=XUDLUSS&VPD=Y
 
+CAD: https://www.bankofcanada.ca/valet/observations/group/FX_RATES_DAILY/json?start_date=2015-01-03
+
 # Install
 
 1 . Clone repository
