@@ -11,6 +11,7 @@ class CurrencyEnum
     public const GBP = 'GBP';
     public const RUB = 'RUB';
     public const CAD = 'CAD';
+    public const MXN = 'MXN';
 
     /**
      * @return string[]
@@ -22,6 +23,7 @@ class CurrencyEnum
             self::GBP,
             self::RUB,
             self::CAD,
+            self::MXN,
         ];
     }
 }

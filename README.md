@@ -10,6 +10,8 @@ GBP: https://www.bankofengland.co.uk/boeapps/database/fromshowcolumns.asp?Travel
 
 CAD: https://www.bankofcanada.ca/valet/observations/group/FX_RATES_DAILY/json?start_date=2015-01-03
 
+MXN: https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43718,CF102
+
 # Install
 
 1 . Clone repository
